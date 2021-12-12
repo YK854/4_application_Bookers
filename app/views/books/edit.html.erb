@@ -1,0 +1,12 @@
+<h1>Editing Book</h1>
+
+<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |b| %>
+  <h4>Title</h4>
+  <%= b.text_field :title %>
+  <h4>Body</h4>
+  <%= b.text_area :body %>
+  <%= b.submit 'Update Book' %>
+<% end %>
+
+<%= link_to "Show", "/books/#{@book.id}" %>
+<%= link_to "Back", "/books" %>
