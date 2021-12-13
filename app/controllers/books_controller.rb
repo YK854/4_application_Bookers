@@ -15,7 +15,7 @@ class BooksController < ApplicationController
       flash[:success] = 'Book was successfully created.'
       redirect_to "/books/#{@book.id}"
     else
-      @books = Book.all
+      @books = Book.all.order(created_at: :desc)
       render :index
     end
   end
