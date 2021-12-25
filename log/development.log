@@ -14910,3 +14910,75 @@ Processing by BooksController#edit as HTML
 Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/top" for 106.167.218.181 at 2021-12-25 14:38:30 +0000
+Cannot render console from 106.167.218.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 225ms (Views: 218.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 106.167.218.181 at 2021-12-25 14:38:33 +0000
+Cannot render console from 106.167.218.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  ↳ app/views/books/index.html.erb:16
+  Rendering books/new.html.erb
+  Rendered books/new.html.erb (5.6ms)
+  Rendered books/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 30ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/33" for 106.167.218.181 at 2021-12-25 14:38:37 +0000
+Cannot render console from 106.167.218.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:24
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/33/edit" for 106.167.218.181 at 2021-12-25 14:38:39 +0000
+Cannot render console from 106.167.218.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/books" for 106.167.218.181 at 2021-12-25 14:38:43 +0000
+Cannot render console from 106.167.218.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g3kv4JJoAiTHzEEeSbRJDu3WwJs/3gCyBsH6Qitk/N1UXv1ROHj4fhzkQIpmSpn4Gzl4NuKdgqSF8BfQ3hwt5w==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:14
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/books_controller.rb:14
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  ↳ app/views/books/index.html.erb:16
+  Rendering books/new.html.erb
+  Rendered books/new.html.erb (1.6ms)
+  Rendered books/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/31" for 106.167.218.181 at 2021-12-25 14:38:45 +0000
+Cannot render console from 106.167.218.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:24
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
